@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    tools:context=".MainActivity">
+
+    <!-- Top Semi-Circle Header -->
+    <View
+        android:id="@+id/semiCircleHeader"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:background="@drawable/semi_circle_shape"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <TextView
+        android:id="@+id/headerText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Student Placement Form"
+        android:textSize="30sp"
+        android:textColor="#EA99A2"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="@id/semiCircleHeader"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="40dp" />
+
+    <!-- Bottom Semi-Circle Footer (Rotated Opposite) -->
+    <View
+        android:id="@+id/semiCircleFooter"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:background="@drawable/semi_circle_shape_bottom"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <!-- Floating Form Card -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/formCard"
+        android:layout_width="0dp"
+        android:layout_height="550dp"
+        app:cardCornerRadius="24dp"
+        app:cardElevation="16dp"
+        app:layout_constraintTop_toBottomOf="@id/semiCircleHeader"
+        app:layout_constraintBottom_toTopOf="@id/semiCircleFooter"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginHorizontal="16dp"
+        android:backgroundTint="#EA99A2">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <!-- CGPA Label and Input -->
+            <TextView
+                android:id="@+id/textViewCgpa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="CGPA"
+                android:textColor="#616161"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/editTextCgpa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:background="@drawable/custom_input"
+                android:hint="Enter CGPA"
+                android:inputType="numberDecimal"
+                android:padding="16dp"
+                android:textColorHint="#B0BEC5" />
+
+            <!-- IQ Label and Input -->
+            <TextView
+                android:id="@+id/textViewIq"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="IQ"
+                android:textColor="#616161"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/editTextIq"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:background="@drawable/custom_input"
+                android:hint="Enter IQ"
+                android:inputType="number"
+                android:padding="16dp"
+                android:textColorHint="#B0BEC5" />
+
+            <!-- Profile Score Label and Input -->
+            <TextView
+                android:id="@+id/textViewProfileScore"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Profile Score"
+                android:textColor="#616161"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/editTextProfileScore"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="32dp"
+                android:background="@drawable/custom_input"
+                android:hint="Enter Profile Score"
+                android:inputType="numberDecimal"
+                android:padding="16dp"
+                android:textColorHint="#B0BEC5" />
+
+            <!-- Submit Button -->
+            <Button
+                android:id="@+id/buttonSubmit"
+                android:layout_width="333dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/custom_button"
+                android:padding="16dp"
+                android:text="Submit"
+                android:textColor="#EA99A2"
+                android:textSize="16sp" />
+            <TextView
+                android:id="@+id/result"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" Placed"
+                android:layout_gravity="center"
+                android:textSize="24sp"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                app:layout_constraintTop_toTopOf="@id/semiCircleHeader"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginTop="40dp" />
+
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
