@@ -11,9 +11,6 @@ The API takes three input parameters:
 - IQ
 - Profile Score
 
-The API takes three output parameters:
-- Placed or Not Placed
-
 It returns a prediction indicating whether the student will be placed or not.
 
 ## Setup Instructions
