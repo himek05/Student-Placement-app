@@ -1,6 +1,6 @@
 # Placement Prediction Android App
 
-![App Image](wh-image.jpg)
+![App Image](appimage.jpg)
 
 This project is a Flask-based API for predicting student placements based on their CGPA, IQ, and profile score. The model is trained using machine learning techniques and is deployed as a web service.
 
